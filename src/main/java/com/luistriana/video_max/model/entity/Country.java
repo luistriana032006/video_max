@@ -26,6 +26,7 @@ public class Country {
     @Id
     @Column(name = "country_id", nullable = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Integer countryId;
 
     @Column(name = "country", nullable = true)

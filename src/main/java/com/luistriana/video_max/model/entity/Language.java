@@ -25,6 +25,7 @@ public class Language {
 @Id
 @Column(name = "language_id")
 @GeneratedValue(strategy = GenerationType.IDENTITY)
+@EqualsAndHashCode.Include
 private Integer language_id;
 
 @Column(name = "name",nullable = true,length = 20)

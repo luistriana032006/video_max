@@ -26,6 +26,7 @@ public class actor {
     // columns
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Integer actor_id;
 
     @Column(nullable = true)

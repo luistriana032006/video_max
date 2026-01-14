@@ -8,9 +8,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 @Entity
 @Table(name = "actor")
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+
 public class actor {
 
     // columns
@@ -24,9 +34,8 @@ public class actor {
     @Column(nullable = true)
     private String last_name;
 
-    // ultima actualiazacion 
-    @Column( name = "last_update")
+    // ultima actualiazacion
+    @Column(name = "last_update")
     private LocalDateTime lastupdate;
-
 
 }

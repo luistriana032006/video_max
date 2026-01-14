@@ -10,33 +10,25 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Entity
-@Table(name = "actor")
+@Table(name = "store")
 @Getter
 @Setter
-@NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+public class Store {
 
-public class Actor {
-
-    // columns
     @Id
+    @Column(name = "store_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer actor_id;
+    private Integer storeId;
 
-    @Column(nullable = true)
+    @Column(name = "manager_staff_id")
+    private Integer managerStaffId;
 
-    private String frist_name;
-    @Column(nullable = true)
-    private String last_name;
-
-    // ultima actualiazacion
     @Column(name = "last_update")
-    private LocalDateTime lastupdate;
+    private LocalDateTime lastUpdate;
 
 }

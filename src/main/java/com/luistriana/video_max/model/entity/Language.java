@@ -26,13 +26,13 @@ public class Language {
 @Column(name = "language_id")
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @EqualsAndHashCode.Include
-private Integer language_id;
+private Integer languageId;
 
 @Column(name = "name",nullable = true,length = 20)
 private String name;
 
 @Column(name = "last_update", nullable = true)
-private LocalDateTime last_update;
+private LocalDateTime lastUpdate;
 
 
 }

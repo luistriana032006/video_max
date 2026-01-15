@@ -24,7 +24,7 @@ public class Address {
     @Column(name = "address_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer adressId;
+    private Integer addressId;
 
     @Column(nullable = true)
     private String address;

@@ -25,7 +25,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer category_id;
+    private Integer categoryId;
 
     @Column(nullable = true)
     private String name;

@@ -27,16 +27,16 @@ public class Actor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer actor_id;
+    private Integer actorId;
 
     @Column(nullable = true)
+    private String firstName;
 
-    private String frist_name;
     @Column(nullable = true)
-    private String last_name;
+    private String lastName;
 
     // ultima actualiazacion
     @Column(name = "last_update")
-    private LocalDateTime lastupdate;
+    private LocalDateTime lastUpdate;
 
 }

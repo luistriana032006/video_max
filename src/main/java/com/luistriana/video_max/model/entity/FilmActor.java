@@ -10,27 +10,25 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "store")
+@Table(name = "film_actor")
 @Getter
 @Setter
-@NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Store {
+public class FilmActor {
 
-    @Id
-    @Column(name = "store_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
-    private Integer storeId;
+@Id
+@Column(name = "actor_id")
+@EqualsAndHashCode.Include
+@GeneratedValue(strategy  = GenerationType.IDENTITY)
+private Integer actorId;
 
-    @Column(name = "manager_staff_id")
-    private Integer managerStaffId;
+@Column(name =  "film_id",nullable = true)
+private Integer filmId;
 
-    @Column(name = "last_update")
-    private LocalDateTime lastUpdate;
+private LocalDateTime lastUpdate;
+
 
 }

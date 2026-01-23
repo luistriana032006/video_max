@@ -14,28 +14,26 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name =  "city")
+@Table(name = "city")
 @Getter
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class City {
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@EqualsAndHashCode.Include
-private Integer cityId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
+    @Column(name = "city_id")
+    private Integer cityId;
 
-@Column(nullable =  true)
-private String city;
+    @Column(nullable = true)
+    private String city;
 
-@Column(nullable = true)
-private Integer countryId;
+    @Column(nullable = true,name = "country_id")
+    private Integer countryId;
 
-@Column(nullable = true)
-private LocalDateTime lastUpdate;
-
-
-
+    @Column(nullable = true,name = "last_update",insertable = false,updatable = false)
+    private LocalDateTime lastUpdate;
 
 }

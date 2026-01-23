@@ -13,7 +13,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Entity
 @Table(name = "language")
 @Getter
@@ -22,17 +21,16 @@ import lombok.Setter;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Language {
 
-@Id
-@Column(name = "language_id")
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@EqualsAndHashCode.Include
-private Integer languageId;
+    @Id
+    @Column(name = "language_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
+    private Integer languageId;
 
-@Column(name = "name",nullable = true,length = 20)
-private String name;
+    @Column(name = "name", nullable = true, length = 20)
+    private String name;
 
-@Column(name = "last_update", nullable = true)
-private LocalDateTime lastUpdate;
-
+    @Column(name = "last_update", nullable = true,insertable = false,updatable = false)
+    private LocalDateTime lastUpdate;
 
 }

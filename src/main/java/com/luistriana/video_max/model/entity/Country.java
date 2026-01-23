@@ -32,7 +32,7 @@ public class Country {
     @Column(name = "country", nullable = true)
     private String country;
 
-    @Column(name = "last_update", nullable = true)
+    @Column(name = "last_update", nullable = true,insertable = false , unique = false)
     private LocalDateTime lastUpdate;
 
 }

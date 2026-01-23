@@ -47,21 +47,21 @@ public class Film {
     @Column(name = "original_language", unique = true)
     private Integer originalLanguage;
 
-    @Column(name = "rental_duration", unique = true)
+    @Column(name = "rental_duration", unique = true, insertable = false)
     private short rentalDuration;
 
-    @Column(name = "rental_date", unique = true, length = 4, scale = 2)
+    @Column(name = "rental_date", unique = true, length = 4, scale = 2, insertable = false)
     private BigDecimal rentalDate;
 
-    @Column(name = "replacement_cost", unique = true, length = 5, scale = 2)
+    @Column(name = "replacement_cost", unique = true, length = 5, scale = 2, insertable = false)
     private BigDecimal replacementCost;
 
     private Short length;
 
-    @Column(name = "mpaa_rating")
+    @Column(name = "mpaa_rating", insertable = false)
     private MpaaRating mpaaRating;
 
-    @Column(name = "last_update", unique = true)
+    @Column(name = "last_update", unique = true, updatable = false, insertable = false)
     private LocalDateTime lastUpdate;
 
     @Type(StringArrayType.class)

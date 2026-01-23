@@ -25,12 +25,13 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
+    @Column(name = "category_id")
     private Integer categoryId;
 
     @Column(nullable = true)
     private String name;
 
-    @Column(nullable = true)
-    private LocalDateTime timestamp;
+    @Column(name = "last_update",nullable = true,insertable = false, updatable = false)
+    private LocalDateTime lastUpdate;
 
 }

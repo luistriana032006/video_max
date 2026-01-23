@@ -46,7 +46,7 @@ public class Address {
     @Column(nullable = true)
     private String phone;
 
-    @Column(name = "last_update",nullable = true)
+    @Column(name = "last_update",nullable = true,insertable = false , updatable =  false)
     private LocalDateTime lastUpdate;
 
 }

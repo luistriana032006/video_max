@@ -27,10 +27,14 @@ public class Store {
     @EqualsAndHashCode.Include
     private Integer storeId;
 
-    @Column(name = "manager_staff_id")
+    @Column(name = "manager_staff_id",nullable = true)
     private Integer managerStaffId;
 
-    @Column(name = "last_update")
+    @Column(name = "last_update",nullable = true,insertable = false,updatable = false)
     private LocalDateTime lastUpdate;
+
+    @Column(name = "address_id",nullable = true)
+    private Integer addressId;
+
 
 }

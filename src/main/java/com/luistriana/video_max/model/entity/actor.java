@@ -36,7 +36,7 @@ public class Actor {
     private String lastName;
 
     // ultima actualiazacion
-    @Column(name = "last_update")
+    @Column(name = "last_update",insertable = false, updatable = false)
     private LocalDateTime lastUpdate;
 
 }

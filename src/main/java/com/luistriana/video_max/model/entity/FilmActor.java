@@ -3,12 +3,11 @@ package com.luistriana.video_max.model.entity;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
 import jakarta.persistence.Table;
-import lombok.EqualsAndHashCode;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,19 +15,14 @@ import lombok.Setter;
 @Table(name = "film_actor")
 @Getter
 @Setter
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+
+// para que el to String responder en claude
 public class FilmActor {
 
-@Id
-@Column(name = "actor_id")
-@EqualsAndHashCode.Include
-@GeneratedValue(strategy  = GenerationType.IDENTITY)
-private Integer actorId;
+    @Column(name = "last_update", insertable = false, unique = false)
+    private LocalDateTime lastUpdate;
 
-@Column(name =  "film_id",nullable = true)
-private Integer filmId;
-
-private LocalDateTime lastUpdate;
-
+    @EmbeddedId
+    private FilmActorId id;
 
 }

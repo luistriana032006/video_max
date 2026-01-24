@@ -1,38 +1,35 @@
 package com.luistriana.video_max.model.entity;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-@Entity
-@Table(name = "country")
-@Getter
+@Table(name = " inventory")
 @Setter
-@NoArgsConstructor
+@Getter
+@Entity
+@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Country {
+public class Inventory {
 
-    // columnas
     @Id
-    @Column(name = "country_id", nullable = true)
+    @Column(name = "inventory_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer countryId;
+    private Integer inventoryId;
 
-    @Column(name = "country", nullable = true)
-    private String country;
+    @Column(name = "film_id", nullable = true)
+    private Integer filmId;
 
-    @Column(name = "last_update", nullable = true,insertable = false , updatable = false)
-    private LocalDateTime lastUpdate;
+    @Column(name = "store_id", nullable = true, insertable = false, updatable = false)
+    private Integer storeId;
 
+    
 }

@@ -14,6 +14,7 @@ tablas_creadas AS (
 	UNION SELECT 'film'
 	UNION SELECT 'film_actor'
 	UNION SELECT 'inventory'
+	UNION SELECT 'staff'
     -- ← AGREGA las que ya tienes
 	
 ),

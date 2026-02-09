@@ -21,35 +21,36 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Staff {
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "staff_id")
-private Integer staffId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "staff_id")
+    private Integer staffId;
 
+    @Column(name = "first_name", nullable = true)
+    private String firstName;
 
-private String firstName;
+    @Column(name = "last_name", nullable = true)
+    private String lastName;
 
-private String lastName;
+    @Column(name = "address_id", nullable = true)
+    private Integer addressId;
 
-private Integer addressId;
+    private String email;
 
-private String email;
+    @Column(name = "store_id", nullable = true)
+    private Integer storeId;
 
-private Integer storeId;
+    @Column(nullable = true)
+    private Boolean active;
 
+    @Column(name = "user_name", nullable = true)
+    private String username;
 
-private Boolean active;
+    private String password;
 
-private String username;
+    @Column(name = "last_update", nullable = true)
+    private LocalDateTime lastUpdate;
 
-
-private String password;
-
-private LocalDateTime last_update;
-
-
-private Byte[] picture;
-
-
+    private Byte[] picture;
 
 }

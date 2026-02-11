@@ -28,26 +28,27 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer customerId;
 
-    @Column(name = "store_id",nullable = true)
+    @Column(name = "store_id", nullable = true)
     private Integer storeId;
 
-    @Column(name = "first_name",nullable = true)
+    @Column(name = "first_name", nullable = true)
     private String firstName;
 
-    @Column(name ="last_name",nullable = true)
+    @Column(name = "last_name", nullable = true)
     private String lastName;
-
 
     private String email;
 
-    @Column(name = "address_id",nullable = true)
+    @Column(name = "address_id", nullable = true)
     private Integer addressId;
 
-    @Column(name = "activebool",nullable = true,columnDefinition = "BOOLEAN DEFAULT true" )
+    @Column(name = "activebool", nullable = true, insertable = false)
     private Boolean activeBool;
 
+    @Column(name = "create_date", nullable = true, insertable = false, updatable = false)
     private LocalDateTime createDate;
 
+    @Column(name = "last_update", insertable = false, updatable = false)
     private LocalDateTime lastUpdate;
 
     private Integer active;

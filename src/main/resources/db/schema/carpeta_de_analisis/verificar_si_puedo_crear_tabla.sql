@@ -1,5 +1,5 @@
 WITH tabla_objetivo AS (
-    SELECT 'staff'::text AS nombre_tabla  -- ← CAMBIA AQUÍ
+    SELECT 'store'::text AS nombre_tabla  -- ← CAMBIA AQUÍ
 ),
 tablas_creadas AS (
     -- Lista las tablas que YA creaste en Java
@@ -15,6 +15,7 @@ tablas_creadas AS (
 	UNION SELECT 'film_actor'
 	UNION SELECT 'inventory'
 	UNION SELECT 'staff'
+	UNION SELECT 'customer'
     -- ← AGREGA las que ya tienes
 	
 ),

@@ -39,10 +39,10 @@ public class Rental {
     @Column(name = "return_date", nullable = true)
     private LocalDateTime returnDate;
 
-    @Column(name = "staff_id", nullable = true)
+    @Column(name = "staff_id")
     private Integer staffId;
 
-    @Column(name = "last_update", nullable = true)
+    @Column(name = "last_update", insertable = false, updatable = false)
     private LocalDateTime lastUpdate;
 
 }

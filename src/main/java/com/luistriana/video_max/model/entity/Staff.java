@@ -7,50 +7,52 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "staff")
 @Getter
 @Setter
+@NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@AllArgsConstructor
 public class Staff {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "staff_id")
+    @EqualsAndHashCode.Include
     private Integer staffId;
 
-    @Column(name = "first_name", nullable = true)
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "last_name", nullable = true)
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "address_id", nullable = true)
+    @Column(name = "address_id")
     private Integer addressId;
 
     private String email;
 
-    @Column(name = "store_id", nullable = true)
+    @Column(name = "store_id")
     private Integer storeId;
 
-    @Column(nullable = true)
     private Boolean active;
 
-    @Column(name = "user_name", nullable = true)
+    @Column(name = "username")
     private String username;
 
     private String password;
 
-    @Column(name = "last_update", nullable = true)
+    @Column(name = "last_update", insertable = false, updatable = false)
     private LocalDateTime lastUpdate;
 
-    private Byte[] picture;
+    @Lob
+    private byte[] picture;
 
 }

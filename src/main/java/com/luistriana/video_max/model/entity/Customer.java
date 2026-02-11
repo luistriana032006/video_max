@@ -1,6 +1,6 @@
 package com.luistriana.video_max.model.entity;
 
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -51,6 +51,7 @@ public class Customer {
     @Column(name = "last_update", insertable = false, updatable = false)
     private LocalDateTime lastUpdate;
 
+    @Column(insertable = false)
     private Integer active;
 
 }

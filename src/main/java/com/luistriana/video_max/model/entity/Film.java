@@ -29,43 +29,43 @@ public class Film {
 
     // atributos - columnas
     @Id
-    @Column(name = " film_id")
+    @Column(name = "film_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer filmId;
 
-    @Column(unique = true)
-    private String text;
+    private String title;
 
     private String description;
 
-    private Integer year;
+    @Column(name = "release_year")
+    private Integer releaseYear;
 
-    @Column(name = "language_id", unique = true)
+    @Column(name = "language_id")
     private Integer languageId;
 
-    @Column(name = "original_language", unique = true)
-    private Integer originalLanguage;
+    @Column(name = "original_language_id")
+    private Integer originalLanguageId;
 
-    @Column(name = "rental_duration", unique = true, insertable = false)
-    private short rentalDuration;
+    @Column(name = "rental_duration", insertable = false)
+    private Short rentalDuration;
 
-    @Column(name = "rental_date", unique = true, length = 4, scale = 2, insertable = false)
-    private BigDecimal rentalDate;
+    @Column(name = "rental_rate", precision = 4, scale = 2, insertable = false)
+    private BigDecimal rentalRate;
 
-    @Column(name = "replacement_cost", unique = true, length = 5, scale = 2, insertable = false)
+    @Column(name = "replacement_cost", precision = 5, scale = 2, insertable = false)
     private BigDecimal replacementCost;
 
     private Short length;
 
-    @Column(name = "mpaa_rating", insertable = false)
-    private MpaaRating mpaaRating;
+    @Column(name = "rating", insertable = false)
+    private MpaaRating rating;
 
-    @Column(name = "last_update", unique = true, updatable = false, insertable = false)
+    @Column(name = "last_update", insertable = false, updatable = false)
     private LocalDateTime lastUpdate;
 
     @Type(StringArrayType.class)
-    @Column(name = "especial_features")
-    private String[] especialFeatures;
+    @Column(name = "special_features")
+    private String[] specialFeatures;
 
 }

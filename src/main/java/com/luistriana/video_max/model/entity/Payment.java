@@ -15,13 +15,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = " payment")
+@Table(name = "payment")
 @Getter
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Payment {
-    // columnas
 
     @Column(name = "payment_id")
     @Id
@@ -29,20 +28,22 @@ public class Payment {
     @EqualsAndHashCode.Include
     private Integer paymentId;
 
-    @Column(name = "customer_id", nullable = true)
+    @Column(name = "customer_id")
     private Integer customerId;
 
-    @Column(name = "staff_id ", nullable = true)
+    @Column(name = "staff_id")
     private Integer staffId;
 
-    @Column(name = "rental_id", nullable = true)
+    @Column(name = "rental_id")
     private Integer rentalId;
 
-    @Column(name = " amount", nullable = true, length = 5, scale = 2)
+    @Column(name = "amount", precision = 5, scale = 2)
     private BigDecimal amount;
 
     @Column(name = "payment_date")
-    private LocalDateTime paymentDate; 
+    private LocalDateTime paymentDate;
 
-    
+    @Column(name = "last_update", insertable = false, updatable = false)
+    private LocalDateTime lastUpdate;
+
 }

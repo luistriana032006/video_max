@@ -9,14 +9,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "film_actor")
 @Getter
 @Setter
-
-// para que el to String responder en claude
+@NoArgsConstructor
 public class FilmActor {
 
     @Column(name = "last_update", insertable = false, unique = false)

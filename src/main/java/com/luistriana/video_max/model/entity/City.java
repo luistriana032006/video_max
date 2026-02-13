@@ -7,11 +7,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "city")
@@ -19,6 +22,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString(exclude = { "country" })
 public class City {
 
     @Id
@@ -30,10 +34,17 @@ public class City {
     @Column(nullable = true)
     private String city;
 
-    @Column(nullable = true,name = "country_id")
-    private Integer countryId;
+    /*
+     * @Column(nullable = true,name = "country_id")
+     * private Integer countryId;
+     */
 
-    @Column(nullable = true,name = "last_update",insertable = false,updatable = false)
+    // agregamos la relacion
+    @ManyToOne
+    @JoinColumn(name = "country_id", nullable = false)
+    private Country country;
+
+    @Column(nullable = true, name = "last_update", insertable = false, updatable = false)
     private LocalDateTime lastUpdate;
 
 }

@@ -1,0 +1,109 @@
+"tabla_origen","columna_fk","tabla_destino","tipo_relacion","codigo_sugerido","relacion_inversa"
+"address","city_id","city","@ManyToOne","// En address:
+@ManyToOne
+@JoinColumn(name = ""city_id"")\nprivate City city;","// En city (OPCIONAL):
+@OneToMany(mappedBy = ""city"")\nprivate List<Address> addresss;"
+"city","country_id","country","@ManyToOne","// En city:
+@ManyToOne
+@JoinColumn(name = ""country_id"")\nprivate Country country;","// En country (OPCIONAL):
+@OneToMany(mappedBy = ""country"")\nprivate List<City> citys;"
+"payment_p2022_01","customer_id","customer","@ManyToOne","// En payment_p2022_01:
+@ManyToOne
+@JoinColumn(name = ""customer_id"")\nprivate Customer customer;","// En customer (OPCIONAL):
+@OneToMany(mappedBy = ""customer"")\nprivate List<Payment_P2022_01> payment_p2022_01s;"
+"payment_p2022_01","rental_id","rental","@ManyToOne","// En payment_p2022_01:
+@ManyToOne
+@JoinColumn(name = ""rental_id"")\nprivate Rental rental;","// En rental (OPCIONAL):
+@OneToMany(mappedBy = ""rental"")\nprivate List<Payment_P2022_01> payment_p2022_01s;"
+"payment_p2022_01","staff_id","staff","@ManyToOne","// En payment_p2022_01:
+@ManyToOne
+@JoinColumn(name = ""staff_id"")\nprivate Staff staff;","// En staff (OPCIONAL):
+@OneToMany(mappedBy = ""staff"")\nprivate List<Payment_P2022_01> payment_p2022_01s;"
+"payment_p2022_02","customer_id","customer","@ManyToOne","// En payment_p2022_02:
+@ManyToOne
+@JoinColumn(name = ""customer_id"")\nprivate Customer customer;","// En customer (OPCIONAL):
+@OneToMany(mappedBy = ""customer"")\nprivate List<Payment_P2022_02> payment_p2022_02s;"
+"payment_p2022_02","rental_id","rental","@ManyToOne","// En payment_p2022_02:
+@ManyToOne
+@JoinColumn(name = ""rental_id"")\nprivate Rental rental;","// En rental (OPCIONAL):
+@OneToMany(mappedBy = ""rental"")\nprivate List<Payment_P2022_02> payment_p2022_02s;"
+"payment_p2022_02","staff_id","staff","@ManyToOne","// En payment_p2022_02:
+@ManyToOne
+@JoinColumn(name = ""staff_id"")\nprivate Staff staff;","// En staff (OPCIONAL):
+@OneToMany(mappedBy = ""staff"")\nprivate List<Payment_P2022_02> payment_p2022_02s;"
+"payment_p2022_03","customer_id","customer","@ManyToOne","// En payment_p2022_03:
+@ManyToOne
+@JoinColumn(name = ""customer_id"")\nprivate Customer customer;","// En customer (OPCIONAL):
+@OneToMany(mappedBy = ""customer"")\nprivate List<Payment_P2022_03> payment_p2022_03s;"
+"payment_p2022_03","rental_id","rental","@ManyToOne","// En payment_p2022_03:
+@ManyToOne
+@JoinColumn(name = ""rental_id"")\nprivate Rental rental;","// En rental (OPCIONAL):
+@OneToMany(mappedBy = ""rental"")\nprivate List<Payment_P2022_03> payment_p2022_03s;"
+"payment_p2022_03","staff_id","staff","@ManyToOne","// En payment_p2022_03:
+@ManyToOne
+@JoinColumn(name = ""staff_id"")\nprivate Staff staff;","// En staff (OPCIONAL):
+@OneToMany(mappedBy = ""staff"")\nprivate List<Payment_P2022_03> payment_p2022_03s;"
+"payment_p2022_04","customer_id","customer","@ManyToOne","// En payment_p2022_04:
+@ManyToOne
+@JoinColumn(name = ""customer_id"")\nprivate Customer customer;","// En customer (OPCIONAL):
+@OneToMany(mappedBy = ""customer"")\nprivate List<Payment_P2022_04> payment_p2022_04s;"
+"payment_p2022_04","rental_id","rental","@ManyToOne","// En payment_p2022_04:
+@ManyToOne
+@JoinColumn(name = ""rental_id"")\nprivate Rental rental;","// En rental (OPCIONAL):
+@OneToMany(mappedBy = ""rental"")\nprivate List<Payment_P2022_04> payment_p2022_04s;"
+"payment_p2022_04","staff_id","staff","@ManyToOne","// En payment_p2022_04:
+@ManyToOne
+@JoinColumn(name = ""staff_id"")\nprivate Staff staff;","// En staff (OPCIONAL):
+@OneToMany(mappedBy = ""staff"")\nprivate List<Payment_P2022_04> payment_p2022_04s;"
+"payment_p2022_05","customer_id","customer","@ManyToOne","// En payment_p2022_05:
+@ManyToOne
+@JoinColumn(name = ""customer_id"")\nprivate Customer customer;","// En customer (OPCIONAL):
+@OneToMany(mappedBy = ""customer"")\nprivate List<Payment_P2022_05> payment_p2022_05s;"
+"payment_p2022_05","rental_id","rental","@ManyToOne","// En payment_p2022_05:
+@ManyToOne
+@JoinColumn(name = ""rental_id"")\nprivate Rental rental;","// En rental (OPCIONAL):
+@OneToMany(mappedBy = ""rental"")\nprivate List<Payment_P2022_05> payment_p2022_05s;"
+"payment_p2022_05","staff_id","staff","@ManyToOne","// En payment_p2022_05:
+@ManyToOne
+@JoinColumn(name = ""staff_id"")\nprivate Staff staff;","// En staff (OPCIONAL):
+@OneToMany(mappedBy = ""staff"")\nprivate List<Payment_P2022_05> payment_p2022_05s;"
+"payment_p2022_06","customer_id","customer","@ManyToOne","// En payment_p2022_06:
+@ManyToOne
+@JoinColumn(name = ""customer_id"")\nprivate Customer customer;","// En customer (OPCIONAL):
+@OneToMany(mappedBy = ""customer"")\nprivate List<Payment_P2022_06> payment_p2022_06s;"
+"payment_p2022_06","rental_id","rental","@ManyToOne","// En payment_p2022_06:
+@ManyToOne
+@JoinColumn(name = ""rental_id"")\nprivate Rental rental;","// En rental (OPCIONAL):
+@OneToMany(mappedBy = ""rental"")\nprivate List<Payment_P2022_06> payment_p2022_06s;"
+"payment_p2022_06","staff_id","staff","@ManyToOne","// En payment_p2022_06:
+@ManyToOne
+@JoinColumn(name = ""staff_id"")\nprivate Staff staff;","// En staff (OPCIONAL):
+@OneToMany(mappedBy = ""staff"")\nprivate List<Payment_P2022_06> payment_p2022_06s;"
+"rental","customer_id","customer","@ManyToOne","// En rental:
+@ManyToOne
+@JoinColumn(name = ""customer_id"")\nprivate Customer customer;","// En customer (OPCIONAL):
+@OneToMany(mappedBy = ""customer"")\nprivate List<Rental> rentals;"
+"rental","inventory_id","inventory","@ManyToOne","// En rental:
+@ManyToOne
+@JoinColumn(name = ""inventory_id"")\nprivate Inventory inventory;","// En inventory (OPCIONAL):
+@OneToMany(mappedBy = ""inventory"")\nprivate List<Rental> rentals;"
+"rental","staff_id","staff","@ManyToOne","// En rental:
+@ManyToOne
+@JoinColumn(name = ""staff_id"")\nprivate Staff staff;","// En staff (OPCIONAL):
+@OneToMany(mappedBy = ""staff"")\nprivate List<Rental> rentals;"
+"store","address_id","address","@ManyToOne","// En store:
+@ManyToOne
+@JoinColumn(name = ""address_id"")\nprivate Address address;","// En address (OPCIONAL):
+@OneToMany(mappedBy = ""address"")\nprivate List<Store> stores;"
+"customer","address_id","address","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"customer","store_id","store","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"film","language_id","language","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"film","original_language_id","language","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"film_actor","actor_id","actor","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"film_actor","film_id","film","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"film_category","category_id","category","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"film_category","film_id","film","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"inventory","film_id","film","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"inventory","store_id","store","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"staff","address_id","address","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"
+"staff","store_id","store","@ManyToMany (tabla intermedia)","// Tabla intermedia - Usar @ManyToMany en ambas entidades principales","Ver detalle de tablas intermedias con otro script"

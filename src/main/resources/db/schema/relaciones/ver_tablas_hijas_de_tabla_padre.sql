@@ -1,4 +1,4 @@
--- ejemplo ver todas las tablas que dependen de "flim"
+-- Ver qué tablas tienen FK hacia "country"
 SELECT DISTINCT
     tc.table_name AS tabla_hija,
     kcu.column_name AS columna_fk
@@ -8,6 +8,6 @@ JOIN information_schema.key_column_usage kcu
 JOIN information_schema.constraint_column_usage ccu 
     ON ccu.constraint_name = tc.constraint_name
 WHERE tc.constraint_type = 'FOREIGN KEY'
-  AND ccu.table_name = 'actor'  -- ← Cambia 'film' por la tabla que quieras
+  AND ccu.table_name = 'address'  -- ← Cambia según tabla padre
   AND tc.table_schema = 'public'
 ORDER BY tc.table_name;

@@ -7,11 +7,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "address")
@@ -19,6 +22,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString(exclude = { "city" })
 public class Address {
 
     // atributos
@@ -28,7 +32,7 @@ public class Address {
     @EqualsAndHashCode.Include
     private Integer addressId;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String address;
 
     private String address2;
@@ -36,17 +40,22 @@ public class Address {
     @Column(nullable = true)
     private String district;
 
-    @Column(name = "city_id", nullable = true)
-    private Integer cityId;
+    /*
+     * @Column(name = "city_id", nullable = true)
+     * private Integer cityId;
+     */
+
+    @ManyToOne
+    @JoinColumn(name = "city_id", nullable = false)
+    private City city;
 
     @Column(name = "postal_code")
-
     private String postalCode;
 
     @Column(nullable = true)
     private String phone;
 
-    @Column(name = "last_update",nullable = true,insertable = false , updatable =  false)
+    @Column(name = "last_update", nullable = true, insertable = false, updatable = false)
     private LocalDateTime lastUpdate;
 
 }
